@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { Children, useState } from 'react'
 import { Bull } from '../../components/icons'
 import FixtureFilter from './FixtureFilter'
 import TitleRow from '../../components/TitleRow'
 
 const Fixture = ({ data, type }) => {
   const [filters, setFilters] = useState('all')
-  const filteredData = data.filter(item => item.winner === filters || filters === 'all')
+  const filteredData = data.filter(item => (filters ? item.winner > 0 : item.winner == 0) || filters === 'all')
 
   return (
-    <section className='fade-in'>
+    <section className='fade-in mb-6'>
       {+type !== 1 && (
         <div>
           <h1 className='italic text-primary text-center mb-3 lg:text-xl mt-6'>Fixture</h1>
@@ -24,7 +24,12 @@ const Fixture = ({ data, type }) => {
           {filteredData.length > 0 && (
             <thead>
               <tr>
-                <th scope='col'>Fecha</th>
+                <th
+                  scope='col'
+                  className='pl-0'
+                >
+                  Fecha
+                </th>
                 <th scope='col'>Hora</th>
                 <th scope='col'>Enfrentamiento</th>
                 <th scope='col'>Resultado</th>
@@ -37,25 +42,26 @@ const Fixture = ({ data, type }) => {
             {filteredData.map(item => (
               <tr
                 key={item.id}
-                className={item.winner ? 'opacity-50 grayscale' : ''}
+                className={item.winner > 0 ? 'opacity-50 grayscale' : ''}
               >
                 <td
                   scope='row'
                   className='pl-0'
                 >
                   <div className='flex gap-x-[0.6rem] items-center'>
-                    {item.winner && <Bull />}
                     <span className='font-semibold'>{item.date}</span>
                   </div>
                 </td>
                 <td>{item.hour}</td>
                 <td className='lg:whitespace-normal flex items-center gap-x-3'>
+                  {item.winner === item.player1_id && <Bull />}
                   <TitleRow
                     image={item.player1_image}
                     title={item.player1_name}
                     link={`/jugadores/${item.player1_id}`}
                   />
                   vs.
+                  {item.winner === item.player2_id && <Bull />}
                   <TitleRow
                     image={item.player2_image}
                     title={item.player2_name}
@@ -63,8 +69,8 @@ const Fixture = ({ data, type }) => {
                   />
                 </td>
                 <td>
-                  {item.winner
-                    ? item.set3home
+                  {item.winner > 0
+                    ? item.set3home > 0 || item.set3away > 0
                       ? item.set1home +
                         '-' +
                         item.set1away +

@@ -15,7 +15,7 @@ const Nosotros = () => {
       <p></p>
 
       <Helmet>
-        <title>1erGolpe Nosotros</title>
+        <title>PrimerGolpe Nosotros</title>
       </Helmet>
     </section>
   )

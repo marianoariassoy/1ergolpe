@@ -13,7 +13,7 @@ const ImageComponent = ({ src, alt }) => {
 
   return isLoading ? (
     <div className='h-full w-full flex items-center justify-center'>
-      <div className='w-3 h-3 rounded-full bg-gray-500 pulse' />
+      <div className='w-3 h-3 rounded-full bg-primary pulse' />
     </div>
   ) : (
     <img

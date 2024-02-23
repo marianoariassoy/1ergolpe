@@ -7,6 +7,7 @@ import { texts, days, months, years } from '../../components/data'
 import Thanks from './Thanks'
 import Error from './Error'
 import Messages from './Messages'
+import { Helmet } from 'react-helmet'
 
 const index = () => {
   const [sended, setSended] = useState(false)
@@ -27,7 +28,7 @@ const index = () => {
     formData.append('data', JSON.stringify(data))
     formData.append('file', image)
     try {
-      const response = await axios.post('http://localhost/sites/1ergolpe-backend/api/users/register', formData, {
+      const response = await axios.post('https://primergolpe.com.ar/api/users/register', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -62,7 +63,7 @@ const index = () => {
             <h1 className='font-bold text-primary text-xl mb-3'>¡Bienvenido! 🚀</h1>
             <div>
               <p className='text-sm opacity-70'>
-                Completá con tus datos y se parte de nuestra comunidad y participa de nuestros torneos.
+                Completá con tus datos para ser parte de 1erGolpe Tenis y participar de nuestros torneos.
               </p>
             </div>
           </div>
@@ -236,6 +237,9 @@ const index = () => {
           </form>
         </div>
       </div>
+      <Helmet>
+        <title>PrimerGolpe Registro</title>
+      </Helmet>
     </section>
   )
 }

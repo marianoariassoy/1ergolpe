@@ -12,6 +12,8 @@ dist
 dist-ssr
 public/assets/videos
 *.local
+sources
+
 
 # Editor directories and files
 .vscode/*

@@ -10,6 +10,7 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Error from './Error'
 import Messages from './Messages'
+import { Helmet } from 'react-helmet'
 
 const index = () => {
   const { isLoggedIn, userData, setUserData } = useAuth()
@@ -37,15 +38,11 @@ const index = () => {
     formData.append('data', JSON.stringify(data))
     formData.append('file', image)
     try {
-      const response = await axios.post(
-        `http://localhost/sites/1ergolpe-backend/api/users/update/${userData.id}`,
-        formData,
-        {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
+      const response = await axios.post(`https://primergolpe.com.ar/api/users/update/${userData.id}`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
         }
-      )
+      })
       if (response.data.success) {
         setError(null)
         setSending(false)
@@ -251,6 +248,9 @@ const index = () => {
           </form>
         </div>
       </div>
+      <Helmet>
+        <title>PrimerGolpe Mis Datos</title>
+      </Helmet>
     </section>
   )
 }

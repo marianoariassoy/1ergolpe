@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Logo, Bars } from '../components/icons'
+import { Logo, Bars, Instagram } from '../components/icons'
 import UserMenu from './UserMenu'
 
 const Header = () => {
@@ -19,6 +19,16 @@ const Header = () => {
           >
             <Bars />
           </label>
+        </div>
+        <div>
+          <a
+            href='http://www.instagram.com/1ergolpetenis'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='hover:text-primary'
+          >
+            <Instagram />
+          </a>
         </div>
       </div>
       <div className='navbar-center text-primary'>

@@ -7,9 +7,6 @@
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-table thead tr {
-  border: none;
-}
 .active,
 .nav-link:hover {
   text-decoration: underline;
@@ -18,9 +15,6 @@ table thead tr {
 svg {
   fill: currentColor;
   stroke: currentColor;
-}
-.text-6xl {
-  font-size: 4rem;
 }
 input::placeholder {
   color: inherit;
@@ -47,25 +41,12 @@ input::placeholder {
     opacity: 1;
   }
 }
+table thead tr {
+  border: none;
+}
 table tbody tr td {
   white-space: nowrap;
 }
 table tbody tr {
   border: 0;
-}
-
-.monotono::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  background: #61ff4c;
-  mix-blend-mode: lighten;
-  opacity: 0.5;
-}
-.monotono img {
-  filter: saturate(0);
 }

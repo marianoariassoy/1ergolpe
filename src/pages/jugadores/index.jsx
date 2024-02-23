@@ -18,6 +18,7 @@ const index = () => {
     ? data.filter(player => player.name.toLowerCase().includes(filterText.toLowerCase()))
     : []
 
+  console.log(filteredPlayers)
   return (
     <section className='fade-in flex flex-col gap-y-6 max-w-md m-auto'>
       <div className='text-center text-xl'>
@@ -50,7 +51,7 @@ const index = () => {
         </table>
       </div>
       <Helmet>
-        <title>1erGolpe Jugadores</title>
+        <title>PrimerGolpe Jugadores</title>
       </Helmet>
     </section>
   )

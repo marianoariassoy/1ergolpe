@@ -43,7 +43,7 @@ const JugadoresContainer = () => {
       {/* <Dobles id={data[0].id} /> */}
 
       <Helmet>
-        <title>1erGolpe {data[0].name}</title>
+        <title>PrimerGolpe {data[0].name}</title>
       </Helmet>
     </section>
   )

@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         <NavBar />
       </header>
       <main className='mx-auto px-5 max-w-4xl w-screen'>{children}</main>
-      <footer>
+      <footer className='z-10'>
         <Footer />
       </footer>
     </>

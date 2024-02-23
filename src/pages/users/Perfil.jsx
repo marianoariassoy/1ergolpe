@@ -20,7 +20,7 @@ const JugadoresContainer = () => {
       <Singles id={userData.id} />
       {/* <Dobles id={userData.id} /> */}
       <Helmet>
-        <title>1erGolpe Usuarios</title>
+        <title>PrimerGolpe Usuarios</title>
       </Helmet>
     </section>
   )

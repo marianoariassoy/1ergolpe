@@ -7,8 +7,9 @@ import Messages from '../users/Messages'
 const Estadisticas = ({ id }) => {
   const { data, loading } = useFetch(`/users/stats/${id}`)
   if (loading) return <Loader />
-  if (!data) return <Messages text='Todavía no participaste en ningún encuentro 🥲' />
+  if (!data) return <Messages text='Todavía no participaste en ningún torneo 🥲' />
 
+  console.log(data)
   const info = [
     {
       title: 'Jugados',
@@ -23,7 +24,7 @@ const Estadisticas = ({ id }) => {
   ]
 
   return (
-    <section className='grid grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-6 bg-base-300 p-6 rounded-2xl'>
+    <section className='grid grid-cols-2 gap-x-12 gap-y-6 bg-base-300 p-6 rounded-2xl'>
       {info.map((item, index) => (
         <EstadisticasItem
           key={index}

@@ -21,7 +21,7 @@ const index = () => {
   const onSubmit = async data => {
     setSending(true)
     try {
-      const response = await axios.post('https://imltenis.com.ar/api/users/forgotpassword', data)
+      const response = await axios.post('https://primergolpe.com.ar/api/users/forgotpassword', data)
       if (response.data.success) {
         setSended(true)
         setSending(false)

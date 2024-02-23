@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 const Soon = () => {
   return (
     <div className='fade-in flex flex-col items-center justify-center h-full'>
@@ -6,6 +7,9 @@ const Soon = () => {
       <div className='text-primary text-center'>
         <span className='block font-bold text-xl'>¡Muy pronto!</span>
       </div>
+      <Helmet>
+        <title>PrimerGolpe Tenis</title>
+      </Helmet>
     </div>
   )
 }

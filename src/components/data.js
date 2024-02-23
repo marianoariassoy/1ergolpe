@@ -1,9 +1,9 @@
 export const menu = [
   { name: 'Ranking Jugadores', url: '/soon' },
-  { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
+  { name: 'Torneos Disputados', url: '/torneos-anteriores' },
   { name: 'Jugadores', url: '/jugadores' },
   { name: 'Reglamento', url: '/reglamento' },
-  { name: 'Nosotros', url: '/nosotros' }
+  { name: 'Nosotros', url: '/soon' }
 ]
 
 export const rankingOptions = [

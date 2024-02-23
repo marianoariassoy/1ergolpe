@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 
@@ -31,7 +30,7 @@ const Torneos = () => {
       </div>
 
       <Helmet>
-        <title>IML Tenis Torneos Anteriores</title>
+        <title>PrimerGolpe Torneos</title>
       </Helmet>
     </section>
   )

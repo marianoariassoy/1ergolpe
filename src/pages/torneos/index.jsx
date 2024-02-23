@@ -41,7 +41,7 @@ const TournamentsContainer = () => {
 
       <Helmet>
         <title>
-          1erGolpe Tenis {data[0].name} {data[0].season}
+          PrimerGolpe Tenis {data[0].name} {data[0].season}
         </title>
       </Helmet>
     </section>

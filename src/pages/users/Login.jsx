@@ -8,6 +8,7 @@ import { texts } from '../../components/data'
 import { useAuth } from '../../context'
 import Error from './Error'
 import Messages from './Messages'
+import { Helmet } from 'react-helmet'
 
 const index = () => {
   const { login } = useAuth()
@@ -24,7 +25,7 @@ const index = () => {
   const onSubmit = async data => {
     setSending(true)
     try {
-      const response = await axios.post('http://localhost/sites/1ergolpe-backend/api/users/login', data)
+      const response = await axios.post('https://primergolpe.com.ar/api/users/login', data)
       if (response.data.success) {
         const token = response.data.token
         login(token)
@@ -104,6 +105,9 @@ const index = () => {
           </form>
         </div>
       </div>
+      <Helmet>
+        <title>PrimerGolpe Login</title>
+      </Helmet>
     </section>
   )
 }
