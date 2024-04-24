@@ -104,15 +104,7 @@ const index = () => {
                 />
                 {errors.phone && <Error text={errors.phone.message} />}
               </div>
-              <div className='form-control'>
-                <Input
-                  type='text'
-                  title='Localidad'
-                  placeholder='Manacor'
-                  register={register('location', { required: texts.required })}
-                />
-                {errors.location && <Error text={errors.location.message} />}
-              </div>
+
               <div className='form-control'>
                 <Input
                   type='email'
@@ -129,22 +121,7 @@ const index = () => {
                 />
                 {errors.email && <Error text={errors.email.message} />}
               </div>
-              <div className='form-control'>
-                <Input
-                  type='text'
-                  title='DNI'
-                  placeholder='12345678'
-                  register={register('dni', {
-                    required: texts.required,
-                    pattern: {
-                      value: /^[0-9]+$/,
-                      message: 'Solo se permiten números'
-                    },
-                    validate: value => value.length === 8 || 'La longitud del DNI deben ser 8 números'
-                  })}
-                />
-                {errors.dni && <Error text={errors.dni.message} />}
-              </div>
+
               <div className='form-control'>
                 <Input
                   type='password'
@@ -169,32 +146,7 @@ const index = () => {
                 />
                 {errors.confirmPassword && <Error text={errors.confirmPassword.message} />}
               </div>
-              <div className='form-control'>
-                <label className='label'>
-                  <span className='label-text text-primary font-medium'>Fecha de nacimiento</span>
-                </label>
-                <div className='flex gap-x-3'>
-                  <Select
-                    options={days}
-                    selected='3'
-                    register={register('day', { required: true })}
-                    title='día'
-                  />
-                  <Select
-                    options={months}
-                    selected='6'
-                    register={register('month', { required: true })}
-                    title='mes'
-                  />
-                  <Select
-                    options={years}
-                    selected='1986'
-                    register={register('year', { required: true })}
-                    title='año'
-                  />
-                </div>
-                {(errors.day || errors.month || errors.year) && <Error text={texts.required} />}
-              </div>
+
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text text-primary font-medium'>Foto de perfil</span>

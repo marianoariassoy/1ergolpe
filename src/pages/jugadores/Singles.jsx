@@ -56,12 +56,14 @@ const JugadoresSingles = ({ id }) => {
                   </Link>
                 </td>
                 <td>
-                  <span className='font-medium '>{item.score}</span>
+                  <span className='font-medium'>{item.score}</span>
                 </td>
                 <td>
-                  <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-primary'>
-                    {item.result}
-                  </div>
+                  {item.result && (
+                    <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-primary'>
+                      {item.result}
+                    </div>
+                  )}
                 </td>
                 <td>
                   <Link

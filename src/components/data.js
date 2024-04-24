@@ -1,8 +1,8 @@
 export const menu = [
-  { name: 'Ranking Jugadores', url: '/soon' },
-  { name: 'Torneos Disputados', url: '/torneos-anteriores' },
+  { name: 'Horarios de cancha', url: '/soon' },
   { name: 'Jugadores', url: '/jugadores' },
   { name: 'Reglamento', url: '/reglamento' },
+  { name: 'Galería de fotos', url: '/galeria-fotos' },
   { name: 'Nosotros', url: '/soon' }
 ]
 

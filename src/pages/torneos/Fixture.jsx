@@ -7,8 +7,9 @@ const Fixture = ({ data, type }) => {
   const [filters, setFilters] = useState('all')
   const filteredData = data.filter(item => (filters ? item.winner > 0 : item.winner == 0) || filters === 'all')
 
+  console.log(filteredData)
   return (
-    <section className='fade-in mb-6'>
+    <section className='fade-in'>
       {+type !== 1 && (
         <div>
           <h1 className='italic text-primary text-center mb-3 lg:text-xl mt-6'>Fixture</h1>
@@ -40,10 +41,7 @@ const Fixture = ({ data, type }) => {
 
           <tbody>
             {filteredData.map(item => (
-              <tr
-                key={item.id}
-                className={item.winner > 0 ? 'opacity-50 grayscale' : ''}
-              >
+              <tr key={item.id}>
                 <td
                   scope='row'
                   className='pl-0'
@@ -54,14 +52,22 @@ const Fixture = ({ data, type }) => {
                 </td>
                 <td>{item.hour}</td>
                 <td className='lg:whitespace-normal flex items-center gap-x-3'>
-                  {item.winner === item.player1_id && <Bull />}
+                  {item.winner === item.player1_id && (
+                    <span className='text-primary'>
+                      <Bull />
+                    </span>
+                  )}
                   <TitleRow
                     image={item.player1_image}
                     title={item.player1_name}
                     link={`/jugadores/${item.player1_id}`}
                   />
                   vs.
-                  {item.winner === item.player2_id && <Bull />}
+                  {item.winner === item.player2_id && (
+                    <span className='text-primary'>
+                      <Bull />
+                    </span>
+                  )}
                   <TitleRow
                     image={item.player2_image}
                     title={item.player2_name}

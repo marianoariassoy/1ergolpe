@@ -44,9 +44,13 @@ input::placeholder {
 table thead tr {
   border: none;
 }
+thead :where(th, td) {
+  padding: 0 !important;
+}
 table tbody tr td {
   white-space: nowrap;
+  padding-bottom: 0 !important;
 }
-table tbody tr {
+/* table tbody tr {
   border: 0;
-}
+} */

@@ -28,10 +28,10 @@ const Welcome = () => {
     <section className='fade-in m-auto max-w-lg flex justify-center items-center text-center h-full'>
       <div>
         <div
-          className='text-6xl lg:text-7xl flex flex-col gap-y-2 mb-3 cursor-pointer  text-primary uppercase transition-colors lg:hover:text-black'
+          className='text-6xl lg:text-7xl flex flex-col gap-y-2 mb-3 cursor-pointer -mt-6 text-primary uppercase transition-colors'
           onClick={openMenu}
         >
-          <span>🏅</span>
+          <span className='text-5xl lg:text-6xl'>🏅</span>
           <span className='italic'>Torneo</span>
           <h1 className='italic'>
             {data[0].name.split(' ').map(item => (
@@ -58,7 +58,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className='fade-in-slow video-background fixed h-screen w-screen left-0 top-0 -z-10'>
+      {/* <div className='fade-in-slow video-background fixed h-screen w-screen left-0 top-0 -z-10'>
         <video
           autoPlay
           playsInline
@@ -67,17 +67,14 @@ const Welcome = () => {
           className='opacity-50 h-full w-full object-cover'
         >
           <source
-            src='./assets/videos/pexels-cottonbro-5740606 (2160p).mp4'
+            src='./assets/videos/video.webm'
+            type='video/webm'
+          />
+          <source
+            src='./assets/videos/video.mp4'
             type='video/mp4'
           />
         </video>
-      </div>
-
-      {/* <div className='fixed left-0 top-0 w-screen h-screen opacity-40 saturate-50 -z-10'>
-        <Image
-          src={bg}
-          alt='Imagen de fondo'
-        />
       </div> */}
 
       <Helmet>

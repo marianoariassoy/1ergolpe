@@ -7,14 +7,7 @@ const Footer = () => {
     <section className='flex flex-col text-center text-sm py-6 px-5'>
       <div className='font-bold'>PrimerGolpe Tenis &copy; {year}</div>
       <div> CACyP Don Torcuato.</div>
-      <div>
-        <a
-          href='mailto:info@primergolpe.com.ar'
-          className='hover:text-primary'
-        >
-          info@primergolpe.com.ar
-        </a>
-      </div>
+
       <div className='flex items-center justify-center gap-x-1'>
         <span className='text-primary'>
           <WhatsApp />

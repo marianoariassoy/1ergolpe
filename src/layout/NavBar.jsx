@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className='fade-in fixed top-0 left-0 w-full h-screen content-center text-center z-30 backdrop-blur-md hidden'
+      className='fade-in fixed top-0 left-0 w-full h-screen bg-black/50 content-center text-center z-30 backdrop-blur-md hidden'
       onClick={openMenu}
     >
       <ul className='text-white/70 flex flex-col'>
@@ -24,7 +24,7 @@ const NavBar = () => {
           <li key={index}>
             <NavLink
               to={`/torneos/${item.id}`}
-              className='nav-link text-primary italic text-xl lg:text-2xl leading-7'
+              className='nav-link text-primary italic text-xl lg:text-2xl'
             >
               {item.name}
             </NavLink>
@@ -34,7 +34,7 @@ const NavBar = () => {
           <li key={index + 20}>
             <NavLink
               to={item.url}
-              className='nav-link font-medium leading-7 text-[1.18rem] lg:text-[1.35rem]'
+              className='nav-link font-medium lg:text-[1.25rem]'
             >
               {item.name}
             </NavLink>

@@ -6,12 +6,13 @@ import Tournaments from './pages/torneos'
 
 import JugadoresProfile from './pages/jugadores/Perfil'
 
-import RankingTemporada from './pages/jugadores/RankingTemporada'
+// import RankingTemporada from './pages/jugadores/RankingTemporada'
 
 import Jugadores from './pages/jugadores'
 import TorneosAnteriores from './pages/torneos-anteriores'
 import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
+import Fotos from './pages/fotos'
 
 import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
@@ -43,15 +44,14 @@ const App = () => {
             element={<JugadoresProfile />}
           />
 
-          <Route
+          {/* <Route
             path='/ranking-temporada'
             element={<RankingTemporada />}
-          />
-
-          <Route
+          /> */}
+          {/* <Route
             path='/torneos-anteriores'
             element={<TorneosAnteriores />}
-          />
+          /> */}
           <Route
             path='/jugadores'
             element={<Jugadores />}
@@ -64,6 +64,10 @@ const App = () => {
           <Route
             path='/nosotros'
             element={<Nosotros />}
+          />
+          <Route
+            path='/galeria-fotos'
+            element={<Fotos />}
           />
 
           <Route

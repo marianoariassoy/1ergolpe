@@ -4,8 +4,9 @@ const TitleRow = ({ num, image, title, link }) => {
   return (
     <div className='flex items-center gap-x-3'>
       {num && <span className='font-bold'>{num}</span>}
-      <div className='avatar'>
-        <div className={`rounded-full ${num ? 'w-14' : 'w-8'}`}>
+
+      <div className={`avatar ${num ? '' : 'hidden'}`}>
+        <div className='rounded-full w-10'>
           <Link
             to={link}
             className='hover:opacity-70 transition-all'

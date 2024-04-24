@@ -36,11 +36,11 @@ const TournamentsGroup = ({ group }) => {
       <div className='row text-center mb-3'>
         <h1 className='text-primary italic lg:text-xl'>{group.name}</h1>
         <h2>
-          <span className='font-medium opacity-70'>Posiciones</span> 🔥
+          <span className='font-medium text-sm opacity-70'>Posiciones 🔥</span>
         </h2>
       </div>
 
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm mb-4'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -77,8 +77,8 @@ const TournamentsGroup = ({ group }) => {
 
       <Labels labels={labels} />
 
-      <div className='text-center text-sm mt-3'>
-        🚀 <span className='opacity-70'>{group.tournament_description}</span>
+      <div className='text-center '>
+        <span className='opacity-70'>{group.tournament_description}</span>
       </div>
     </section>
   )

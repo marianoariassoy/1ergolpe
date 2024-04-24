@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../context'
+import { Instagram } from '../components/icons'
 
 const UserMenu = () => {
   const { logout, isLoggedIn, userData } = useAuth()
@@ -7,15 +8,15 @@ const UserMenu = () => {
 
   if (!isLoggedIn)
     return (
-      <div className='flex gap-x-4 items-center'>
-        <Link
-          to='/usuarios/login'
-          className={`font-bold text-sm ${
-            location.pathname === '/usuarios/login' ? 'text-primary' : 'hover:text-primary'
-          }`}
+      <div>
+        <a
+          href='http://www.instagram.com/1ergolpetenis'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='hover:text-primary'
         >
-          LOGIN
-        </Link>
+          <Instagram />
+        </a>
       </div>
     )
 
