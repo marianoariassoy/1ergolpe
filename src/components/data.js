@@ -3,6 +3,7 @@ export const menu = [
   { name: 'Jugadores', url: '/jugadores' },
   { name: 'Reglamento', url: '/reglamento' },
   { name: 'Galería de fotos', url: '/galeria-fotos' },
+  { name: 'Login', url: '/usuarios/login' },
   { name: 'Nosotros', url: '/soon' }
 ]
 
