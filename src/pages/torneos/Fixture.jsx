@@ -7,9 +7,8 @@ const Fixture = ({ data, type }) => {
   const [filters, setFilters] = useState('all')
   const filteredData = data.filter(item => (filters ? item.winner > 0 : item.winner == 0) || filters === 'all')
 
-  console.log(filteredData)
   return (
-    <section className='fade-in'>
+    <section className='fade-in mb-3'>
       {+type !== 1 && (
         <div>
           <h1 className='italic text-primary text-center mb-3 lg:text-xl mt-6'>Fixture</h1>

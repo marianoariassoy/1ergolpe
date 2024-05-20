@@ -19,6 +19,7 @@ const TournamentsContainer = () => {
   if (loading) return <Loader />
   if (!data) return null
 
+  console.log(data)
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center text-primary text-xl'>
@@ -26,19 +27,16 @@ const TournamentsContainer = () => {
           <span className='font-bold'>{data[0].name}</span>
           <span className='font-medium hidden lg:inline'> {data[0].season}</span>
         </h1>
-        🏆
       </div>
 
       {data[0].champion_id && (
         <Champion
           id={data[0].champion_id}
           name={data[0].champion_name}
-          image={info.champion_image}
+          image={data[0].champion_image}
         />
       )}
-
       <Tournaments id={id} />
-
       <Helmet>
         <title>
           PrimerGolpe Tenis {data[0].name} {data[0].season}
