@@ -12,6 +12,7 @@ import Jugadores from './pages/jugadores'
 import TorneosAnteriores from './pages/torneos-anteriores'
 import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
+import Colaboradores from './pages/colaboradores'
 import Fotos from './pages/fotos'
 
 import Soon from './pages/Soon'
@@ -33,12 +34,10 @@ const App = () => {
             path='/'
             element={<Welcome />}
           />
-
           <Route
             path='/torneos/:id'
             element={<Tournaments />}
           />
-
           <Route
             path='/jugadores/:id'
             element={<JugadoresProfile />}
@@ -48,18 +47,21 @@ const App = () => {
             path='/ranking-temporada'
             element={<RankingTemporada />}
           /> */}
-          {/* <Route
+          <Route
             path='/torneos-anteriores'
             element={<TorneosAnteriores />}
-          /> */}
+          />
           <Route
             path='/jugadores'
             element={<Jugadores />}
           />
-
           <Route
             path='/reglamento'
             element={<Reglamento />}
+          />
+          <Route
+            path='/colaboradores'
+            element={<Colaboradores />}
           />
           <Route
             path='/nosotros'
@@ -69,7 +71,6 @@ const App = () => {
             path='/galeria-fotos'
             element={<Fotos />}
           />
-
           <Route
             path='/usuarios/login'
             element={<UsersLogin />}

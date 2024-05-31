@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='font-bold'>PrimerGolpe Tenis &copy; {year}</div>
       <div> CACyP Don Torcuato.</div>
 
-      <div className='flex items-center justify-center gap-x-1'>
+      <div className='flex items-center justify-center gap-x-1 mt-1'>
         <span className='text-primary'>
           <WhatsApp />
         </span>
@@ -18,13 +18,13 @@ const Footer = () => {
         >
           11 5155 7285
         </a>
-        <span>-</span>
+        {/* <span>-</span>
         <a
           href='https://wa.me/5491144993930'
           className='hover:text-primary'
         >
           11 4499 3930
-        </a>
+        </a> */}
       </div>
     </section>
   )

@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 import Image from './Image'
-const TitleRow = ({ num, image, title, link }) => {
+const TitleRow = ({ image, title, link }) => {
   return (
     <div className='flex items-center gap-x-3'>
-      {num && <span className='font-bold w-2'>{num}</span>}
-
-      <div className={`avatar ${num ? '' : 'hidden'}`}>
+      <div className='w-2'> </div>
+      <div className={`avatar`}>
         <div className='rounded-full w-8'>
           <Link
             to={link}
@@ -18,16 +17,12 @@ const TitleRow = ({ num, image, title, link }) => {
           </Link>
         </div>
       </div>
-      {link ? (
-        <Link
-          to={link}
-          className='hover:text-primary font-medium'
-        >
-          {title}
-        </Link>
-      ) : (
-        title
-      )}
+      <Link
+        to={link}
+        className='hover:text-primary font-medium'
+      >
+        {title}
+      </Link>
     </div>
   )
 }

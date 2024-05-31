@@ -28,7 +28,7 @@ const TornamentsChampion = ({ id, name, image }) => {
           </div>
         </div>
       )}
-      <h1 className='text-center font-medium lg:text-xl'>{name} </h1>
+      <h1 className='text-center font-medium'>{name} </h1>
     </div>
   )
 }

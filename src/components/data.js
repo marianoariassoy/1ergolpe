@@ -1,10 +1,13 @@
 export const menu = [
-  { name: 'Horarios de cancha', url: '/soon' },
-  { name: 'Jugadores', url: '/jugadores' },
-  { name: 'Reglamento', url: '/reglamento' },
+  // { name: 'Horarios de cancha', url: '/soon' },
+  { name: 'Torneos', url: '/torneos-anteriores' },
   { name: 'Galería de fotos', url: '/galeria-fotos' },
-  { name: 'Login', url: '/usuarios/login' },
-  { name: 'Nosotros', url: '/soon' }
+  { name: 'Jugadores', url: '/jugadores' },
+  { name: 'Rankings', url: '/soon' },
+  { name: 'Colaboradores', url: '/colaboradores' },
+  { name: 'Reglamento', url: '/reglamento' },
+  { name: 'Nosotros', url: '/soon' },
+  { name: 'Login', url: '/usuarios/login' }
 ]
 
 export const rankingOptions = [

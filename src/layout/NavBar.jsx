@@ -20,16 +20,17 @@ const NavBar = () => {
       onClick={openMenu}
     >
       <ul className='text-white/70 flex flex-col'>
-        {data.map((item, index) => (
-          <li key={index}>
-            <NavLink
-              to={`/torneos/${item.id}`}
-              className='nav-link text-primary italic text-xl lg:text-2xl'
-            >
-              {item.name}
-            </NavLink>
-          </li>
-        ))}
+        {data &&
+          data.map((item, index) => (
+            <li key={index}>
+              <NavLink
+                to={`/torneos/${item.id}`}
+                className='nav-link text-primary italic text-xl lg:text-2xl'
+              >
+                {item.name}
+              </NavLink>
+            </li>
+          ))}
         {menu.map((item, index) => (
           <li key={index + 20}>
             <NavLink

@@ -15,7 +15,7 @@ const FixtureFilter = ({ filters, setFilters }) => {
   ]
 
   return (
-    <div className='grid grid-cols-3 text-center text-sm mb-3  m-auto w-64'>
+    <div className='grid grid-cols-3 text-center text-sm mb-3 m-auto w-64'>
       {options.map((item, index) => (
         <button
           key={index}

@@ -2,6 +2,7 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
+import TitleRow2 from '../../components/TitleRow2'
 
 const TournamentsGroup = ({ group }) => {
   const { data, loading } = useFetch(`/tournaments/groups/players/${group.id}`)
@@ -36,7 +37,7 @@ const TournamentsGroup = ({ group }) => {
       <div className='row text-center mb-3'>
         <h1 className='text-primary italic lg:text-xl'>{group.name}</h1>
         <h2>
-          <span className='font-medium text-sm opacity-70'>Posiciones 🔥</span>
+          <span className='font-medium'>Posiciones 🔥</span>
         </h2>
       </div>
 
@@ -55,13 +56,20 @@ const TournamentsGroup = ({ group }) => {
                 key={item.id}
                 className={`${index < group.winners ? 'text-primary' : ''}`}
               >
-                <td className='pl-0'>
+                <td className='pl-0 flex flex-col gap-y-2'>
                   <TitleRow
                     num={index + 1}
                     image={item.image}
                     title={item.name}
-                    link={`/jugadores/${item.id}`}
+                    link={`/jugadores/${item.id_player1}`}
                   />
+                  {item.name_player2 && (
+                    <TitleRow2
+                      image={item.image_player2}
+                      title={item.name_player2}
+                      link={`/jugadores/${item.id_player2}`}
+                    />
+                  )}
                 </td>
                 <td>
                   <span className='font-bold'>{item.matches_won}</span>

@@ -11,7 +11,7 @@ const Fixture = ({ data, type }) => {
     <section className='fade-in mb-3'>
       {+type !== 1 && (
         <div>
-          <h1 className='italic text-primary text-center mb-3 lg:text-xl mt-6'>Fixture</h1>
+          <h1 className='italic text-primary text-center mb-1 lg:text-xl mt-6'>Fixture</h1>
           <FixtureFilter
             filters={filters}
             setFilters={setFilters}
@@ -31,7 +31,7 @@ const Fixture = ({ data, type }) => {
                   Fecha
                 </th>
                 <th scope='col'>Hora</th>
-                <th scope='col'>Enfrentamiento</th>
+                <th scope='col'>Jugadores</th>
                 <th scope='col'>Resultado</th>
                 <th scope='col'>Id</th>
               </tr>
@@ -40,7 +40,10 @@ const Fixture = ({ data, type }) => {
 
           <tbody>
             {filteredData.map(item => (
-              <tr key={item.id}>
+              <tr
+                key={item.id}
+                className={item.winner > 0 ? 'opacity-50' : ''}
+              >
                 <td
                   scope='row'
                   className='pl-0'
@@ -50,28 +53,42 @@ const Fixture = ({ data, type }) => {
                   </div>
                 </td>
                 <td>{item.hour}</td>
-                <td className='lg:whitespace-normal flex items-center gap-x-3'>
-                  {item.winner === item.player1_id && (
-                    <span className='text-primary'>
-                      <Bull />
-                    </span>
-                  )}
-                  <TitleRow
-                    image={item.player1_image}
-                    title={item.player1_name}
-                    link={`/jugadores/${item.player1_id}`}
-                  />
+                <td className='flex items-center gap-x-2'>
+                  <span className={item.winner === item.player1_id ? 'underline  underline-offset-4' : ''}>
+                    <TitleRow
+                      image={item.player1_image}
+                      title={item.player1_name}
+                      link=''
+                    />
+                    {item.player3_id && (
+                      <div className='flex gap-x-2 items-center'>
+                        y
+                        <TitleRow
+                          image={item.player3_image}
+                          title={item.player3_name}
+                          link=''
+                        />
+                      </div>
+                    )}
+                  </span>
                   vs.
-                  {item.winner === item.player2_id && (
-                    <span className='text-primary'>
-                      <Bull />
-                    </span>
-                  )}
-                  <TitleRow
-                    image={item.player2_image}
-                    title={item.player2_name}
-                    link={`/jugadores/${item.player2_id}`}
-                  />
+                  <span className={item.winner === item.player2_id ? 'underline  underline-offset-4' : ''}>
+                    <TitleRow
+                      image={item.player2_image}
+                      title={item.player2_name}
+                      link=''
+                    />
+                    {item.player4_id && (
+                      <div className='flex gap-x-2 items-center'>
+                        y
+                        <TitleRow
+                          image={item.player4_image}
+                          title={item.player4_name}
+                          link=''
+                        />
+                      </div>
+                    )}
+                  </span>
                 </td>
                 <td>
                   {item.winner > 0
