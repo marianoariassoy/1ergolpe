@@ -1,40 +1,51 @@
 export const menu = [
-  // { name: 'Horarios de cancha', url: '/soon' },
-  { name: 'Torneos', url: '/torneos-anteriores' },
+  { name: 'Torneos', url: '/torneos' },
+  // { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
   { name: 'Galería de fotos', url: '/galeria-fotos' },
   { name: 'Jugadores', url: '/jugadores' },
-  { name: 'Rankings', url: '/soon' },
+  { name: 'Rankings', url: '/ranking' },
   { name: 'Colaboradores', url: '/colaboradores' },
   { name: 'Reglamento', url: '/reglamento' },
-  { name: 'Nosotros', url: '/soon' },
   { name: 'Login', url: '/usuarios/login' }
 ]
 
 export const rankingOptions = [
   {
-    name: 'Damas',
-    category: 6
+    name: 'Damas A',
+    category: 16
   },
   {
-    name: '1era',
-    category: 1
+    name: 'Damas B',
+    category: 15
   },
   {
-    name: '2da',
-    category: 2
+    name: 'Damas C',
+    category: 14
+  },
+  {
+    name: 'Caballeros Super A',
+    category: 13
   },
 
   {
-    name: '3ra',
-    category: 3
+    name: 'Caballeros A1',
+    category: 12
   },
   {
-    name: '4ta',
-    category: 4
+    name: 'Caballeros A2',
+    category: 11
   },
   {
-    name: '5ta',
-    category: 5
+    name: 'Caballeros B1',
+    category: 10
+  },
+  {
+    name: 'Caballeros B2',
+    category: 9
+  },
+  {
+    name: 'Caballeros C',
+    category: 23
   }
 ]
 

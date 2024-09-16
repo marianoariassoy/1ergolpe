@@ -11,7 +11,7 @@ const Torneos = () => {
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center text-primary text-xl'>
-        <h1 className='font-bold'>Torneos</h1>
+        <h1 className='font-bold'>Torneos anteriores</h1>
       </div>
 
       <div className='flex flex-col gap-y-1 items-center font-medium text-center'>

@@ -55,3 +55,7 @@ table thead tr th {
   white-space: nowrap;
   padding-left: 0.25rem !important;
 }
+.ranking-categories::after {
+  content: ' - ';
+  margin: 0 0.25rem;
+}

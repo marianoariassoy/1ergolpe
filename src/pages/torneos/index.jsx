@@ -24,7 +24,7 @@ const TournamentsContainer = () => {
       <div className='text-center text-primary text-xl'>
         <h1>
           <span className='font-bold'>{data[0].name}</span>
-          <span className='font-medium hidden lg:inline'> {data[0].season} </span>
+          <span className='font-medium hidden lg:inline'> {data[0].season}</span>
         </h1>
       </div>
 

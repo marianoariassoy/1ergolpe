@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Singles from './Singles'
-// import Dobles from './Dobles'
+import Dobles from './Dobles'
 import Image from '../../components/Image'
 
 const JugadoresContainer = () => {
