@@ -4,7 +4,6 @@ export const menu = [
   { name: 'Galería de fotos', url: '/galeria-fotos' },
   { name: 'Jugadores', url: '/jugadores' },
   { name: 'Rankings', url: '/ranking' },
-  { name: 'Colaboradores', url: '/colaboradores' },
   { name: 'Reglamento', url: '/reglamento' },
   { name: 'Login', url: '/usuarios/login' }
 ]

@@ -9,7 +9,6 @@ import Torneos from './pages/torneos-anteriores'
 import TorneosTemporada from './pages/torneos/TorneosTemporada'
 import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
-import Colaboradores from './pages/colaboradores'
 import Fotos from './pages/fotos'
 import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
@@ -62,10 +61,7 @@ const App = () => {
             path='/reglamento'
             element={<Reglamento />}
           />
-          <Route
-            path='/colaboradores'
-            element={<Colaboradores />}
-          />
+
           <Route
             path='/nosotros'
             element={<Nosotros />}

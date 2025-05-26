@@ -48,12 +48,15 @@ table tbody tr {
   border-color: rgba(255, 255, 255, 0.05) !important;
 }
 table thead tr th {
-  padding-bottom: 0.5rem !important;
+  padding-bottom: 0.25rem !important;
 }
 table tbody tr td,
 table thead tr th {
   white-space: nowrap;
   padding-left: 0.25rem !important;
+  padding-bottom: 0.15rem !important;
+  padding-top: 0.15rem !important;
+  border: 0 !important;
 }
 .ranking-categories::after {
   content: ' - ';

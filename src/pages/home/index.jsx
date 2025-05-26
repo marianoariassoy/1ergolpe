@@ -19,8 +19,8 @@ const Welcome = () => {
 
   return (
     <section className='fade-in m-auto max-w-lg flex justify-center items-center text-center h-full'>
-      <div className='flex flex-col gap-y-12'>
-        <div className='text-3xl lg:text-5xl flex flex-col gap-y-6 cursor-pointer text-primary transition-colors  mx-6 [&>a:last-child]:border-0'>
+      <div className='flex flex-col'>
+        <div className='text-5xl lg:text-6xl flex flex-col gap-y-4 cursor-pointer text-primary transition-colors  mx-6 [&>a:last-child]:border-0'>
           {data.map(item => (
             <Link
               to={`/torneos-temporada/${item.id}`}
