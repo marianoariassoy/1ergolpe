@@ -5,6 +5,7 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Tournaments from './Tournaments'
 import Champion from './Champion'
+import ChampionDoubles from './Champion_doubles'
 
 const TournamentsContainer = () => {
   useEffect(() => {
@@ -28,13 +29,16 @@ const TournamentsContainer = () => {
         </h1>
       </div>
 
-      {data[0].champion_id && (
+      {data[0].champion_id && +data[0].type === 1 && (
         <Champion
           id={data[0].champion_id}
           name={data[0].champion_name}
           image={data[0].champion_image}
         />
       )}
+
+      {data[0].champion_id && +data[0].type === 2 && <ChampionDoubles data={data[0]} />}
+
       <Tournaments id={id} />
       <Helmet>
         <title>

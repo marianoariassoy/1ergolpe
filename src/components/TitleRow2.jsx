@@ -5,7 +5,7 @@ const TitleRow = ({ image, title, link }) => {
     <div className='flex items-center gap-x-3'>
       <div className='w-2'> </div>
       <div className={`avatar`}>
-        <div className='rounded-full w-8'>
+        <div className='rounded-full w-10'>
           <Link
             to={link}
             className='hover:opacity-70 transition-all'
