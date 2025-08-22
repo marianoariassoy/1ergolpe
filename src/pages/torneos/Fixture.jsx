@@ -1,6 +1,4 @@
-import { Children, useState } from 'react'
-import { Bull } from '../../components/icons'
-import FixtureFilter from './FixtureFilter'
+import { useState } from 'react'
 import TitleRow from '../../components/TitleRow'
 
 const Fixture = ({ data, type }) => {
@@ -9,15 +7,7 @@ const Fixture = ({ data, type }) => {
 
   return (
     <section className='fade-in mb-3'>
-      {+type !== 1 && (
-        <div>
-          <h1 className='italic text-primary text-center mb-1 lg:text-lg mt-6'>Fixture</h1>
-          <FixtureFilter
-            filters={filters}
-            setFilters={setFilters}
-          />
-        </div>
-      )}
+      {+type !== 1 && <h1 className='italic text-primary text-center lg:text-lg mt-6 mb-3'>Fixture</h1>}
 
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
