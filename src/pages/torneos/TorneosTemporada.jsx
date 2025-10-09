@@ -16,9 +16,7 @@ const Torneos = () => {
         <h1 className='font-bold mx-6'>{dataFiltered[0].season_name}</h1>
       </div>
 
-      <Calendario id_season={+id} />
-
-      <div className='flex flex-col gap-y-6'>
+      <div className='flex flex-col gap-y-4'>
         <h1 className='font-bold mx-6 text-center text-primary text-lg'>Categorías 🏆</h1>
         <div className='flex flex-col gap-y-1 items-center font-medium text-center'>
           {dataFiltered &&
@@ -33,6 +31,8 @@ const Torneos = () => {
             ))}
         </div>
       </div>
+
+      <Calendario id_season={+id} />
 
       <Helmet>
         <title>PrimerGolpe Torneos</title>

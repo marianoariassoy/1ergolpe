@@ -37,10 +37,10 @@ const index = () => {
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <tbody>
-            {filteredPlayers.map(item => (
-              <tr key={item.id}>
+            {filteredPlayers.map((item, index) => (
+              <tr key={index}>
                 <TitleRow
-                  num=''
+                  num={index + 1}
                   image={item.image}
                   title={item.name}
                   link={`/jugadores/${item.id}`}

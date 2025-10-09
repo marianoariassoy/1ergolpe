@@ -36,7 +36,6 @@ const JugadoresContainer = () => {
 
         <div className='text-center'>
           <h1 className='font-bold text-primary'>{data[0].name}</h1>
-          <p className='text-sm'>{data[0].age}</p>
         </div>
       </div>
 

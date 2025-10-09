@@ -13,7 +13,7 @@ const Calendario = ({ id_season }) => {
       <h1 className='font-bold mx-6 text-center text-primary text-lg'>Calendario 📅</h1>
 
       <section className='fade-in mb-3'>
-        <div className='overflow-x-auto text-sm'>
+        <div className='overflow-x-auto text-sm mb-6'>
           <table className='table w-full'>
             {data.length > 0 && (
               <thead>
@@ -84,8 +84,11 @@ const Calendario = ({ id_season }) => {
                     </span>
                   </td>
                   <td>
-                    <Link to={`/torneos/${item.tournament_id}`}>
-                      <span className='text-medium text-primary hover:underline'>{item.tournament_name}</span>
+                    <Link
+                      to={`/torneos/${item.tournament_id}`}
+                      className='hover:underline text-medium '
+                    >
+                      <span className='text-primary '>{item.tournament_name}</span> -<span>{item.group_name}</span>
                     </Link>
                   </td>
                 </tr>

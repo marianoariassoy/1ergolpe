@@ -28,24 +28,24 @@ const Estadisticas = ({ id }) => {
               />
             </td>
           </tr>
-          {data[0].sets_total > 0 && (
-            <tr>
-              <td className='py-1'>
-                <div>Sets jugados</div>
-                <Count
-                  end={data[0].sets_total}
-                  duration={2}
-                />
-              </td>
-              <td>
-                <div>Sets ganados</div>
-                <Count
-                  end={data[0].sets_won}
-                  duration={4}
-                />
-              </td>
-            </tr>
-          )}
+          {/* {data[0].sets_total > 0 && ( */}
+          <tr>
+            <td className='py-1'>
+              <div>Sets jugados</div>
+              <Count
+                end={data[0].sets_total}
+                duration={2}
+              />
+            </td>
+            <td>
+              <div>Sets ganados</div>
+              <Count
+                end={data[0].sets_won}
+                duration={4}
+              />
+            </td>
+          </tr>
+          {/* )} */}
 
           <tr>
             <td className='py-1'>
