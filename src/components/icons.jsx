@@ -4,8 +4,8 @@ export const Logo = () => {
       version='1.1'
       x='0px'
       y='0px'
-      width='190px'
-      height='50px'
+      width='180px'
+      height='40px'
       viewBox='0 0 200 60'
     >
       <path

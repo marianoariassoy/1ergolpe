@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <div className='navbar w-full py-6 px-5 backdrop-blur-md'>
+    <div className='navbar w-full py-6 px-3 backdrop-blur-md'>
       <div className='navbar-start gap-x-4'>
         <div className='dropdown'>
           <label

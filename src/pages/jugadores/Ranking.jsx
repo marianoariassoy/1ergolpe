@@ -13,13 +13,15 @@ const JugadoresRanking = () => {
 
   useEffect(() => {
     if (data) setDataFiltered(data.filter(item => +item.category === filter && +item.year === year))
-  }, [filter, year])
+  }, [filter, year, data])
+
+  if (!data) return null
 
   if (loading) return <Loader />
 
   const labels = [
     {
-      name: 'Nombre',
+      name: 'Jugador',
       value: ''
     },
     {
@@ -29,12 +31,12 @@ const JugadoresRanking = () => {
   ]
 
   return (
-    <section className='fade-in flex flex-col gap-y-6 max-w-2xl m-auto'>
+    <section className='fade-in flex flex-col gap-y-6 max-w-xl m-auto'>
       <div className='text-center '>
         <h1 className='font-bold text-primary text-xl'>Ranking de jugadores</h1>
         <div className='flex justify-center items-center gap-x-3 text-xl'>
           <button
-            className={`font-bold ${
+            className={`font-semibold ${
               year === 2025 ? 'text-primary' : 'opacity-70 hover:text-primary hover:opacity-100'
             }`}
             onClick={() => setYear(2025)}
@@ -42,7 +44,7 @@ const JugadoresRanking = () => {
             2025
           </button>
           <button
-            className={`font-bold ${
+            className={`font-semibold ${
               year === 2024 ? 'text-primary' : 'opacity-70 hover:text-primary hover:opacity-100'
             }`}
             onClick={() => setYear(2024)}

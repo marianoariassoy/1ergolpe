@@ -6,7 +6,7 @@ const Item = ({ item }) => {
       <a
         href={item.url}
         target='_blank'
-        className='w-ful h-full hover:opacity-70'
+        className='w-full h-full hover:opacity-70'
       >
         <Image
           src={item.image}

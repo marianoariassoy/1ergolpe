@@ -6,6 +6,7 @@ import Loader from '../../components/Loader'
 import Singles from './Singles'
 import Dobles from './Dobles'
 import Image from '../../components/Image'
+import Estadisticas from './Estadisticas'
 
 const JugadoresContainer = () => {
   const { id } = useParams()
@@ -35,9 +36,11 @@ const JugadoresContainer = () => {
 
         <div className='text-center'>
           <h1 className='font-bold text-primary'>{data[0].name}</h1>
+          <p className='text-sm'>{data[0].age}</p>
         </div>
       </div>
 
+      <Estadisticas id={data[0].id} />
       <Singles id={data[0].id} />
       <Dobles id={data[0].id} />
 

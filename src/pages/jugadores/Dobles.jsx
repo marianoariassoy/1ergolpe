@@ -53,14 +53,14 @@ const JugadoresDobles = ({ id }) => {
                 <td>
                   <Link
                     to={`/jugadores/${item.oponent1_id}`}
-                    className='link-hover text-primary font-bold'
+                    className='link-hover text-primary font-medium'
                   >
                     {item.oponent1_name}
                   </Link>
                   <span> y </span>
                   <Link
                     to={`/jugadores/${item.oponent2_id}`}
-                    className='link-hover text-primary font-bold'
+                    className='link-hover text-primary font-medium'
                   >
                     {item.oponent2_name}
                   </Link>
@@ -68,7 +68,7 @@ const JugadoresDobles = ({ id }) => {
                 <td>
                   <Link
                     to={`/jugadores/${item.partner_id}`}
-                    className='link-hover text-primary font-bold'
+                    className='link-hover text-primary font-medium'
                   >
                     {item.partner_name}
                   </Link>
@@ -82,7 +82,7 @@ const JugadoresDobles = ({ id }) => {
                 <td>
                   <Link
                     to={`/torneos/${item.tournament_id}`}
-                    className='link-hover text-primary'
+                    className='link-hover text-primary font-medium'
                   >
                     {item.tournament_name}
                   </Link>

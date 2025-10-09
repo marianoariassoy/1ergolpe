@@ -6,7 +6,7 @@ const TitleRow = ({ num, image, title, link }) => {
       {num && <span className='font-bold w-2'>{num}</span>}
 
       <div className={`avatar ${num ? '' : 'hidden'}`}>
-        <div className='rounded-full w-10 my-2'>
+        <div className='rounded-full w-12 my-2'>
           <Link
             to={link}
             className='hover:opacity-70 transition-all'

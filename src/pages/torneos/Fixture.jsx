@@ -43,7 +43,7 @@ const Fixture = ({ data, type }) => {
                   </div>
                 </td>
                 <td>{item.hour}</td>
-                <td className='flex items-center gap-x-2'>
+                <td className='flex items-center gap-x-1'>
                   <span className={item.winner === item.player1_id ? 'underline  underline-offset-4' : ''}>
                     <TitleRow
                       image={item.player1_image}

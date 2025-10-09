@@ -37,7 +37,7 @@ const TournamentsGroup = ({ group }) => {
       <div className='row text-center mb-3'>
         <h1 className='text-primary italic lg:text-lg'>{group.name}</h1>
         <h2>
-          <span className='font-medium'>Posiciones 🔥</span>
+          <span className='font-medium'>Posiciones</span>
         </h2>
       </div>
 

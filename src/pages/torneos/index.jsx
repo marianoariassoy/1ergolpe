@@ -22,8 +22,8 @@ const TournamentsContainer = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <div className='text-center text-primary text-xl'>
-        <h1>
+      <div className='text-center text-primary text-lg'>
+        <h1 className='flex flex-col'>
           <span className='font-bold'>{data[0].name}</span>
           <span className='font-medium hidden lg:inline'> {data[0].season}</span>
         </h1>
