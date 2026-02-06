@@ -20,7 +20,7 @@ const Welcome = () => {
   return (
     <section className='fade-in m-auto max-w-lg flex justify-center items-center text-center h-full'>
       <div className='flex flex-col'>
-        <div className='text-3xl lg:text-4xl flex flex-col gap-y-4 cursor-pointer text-primary transition-colors  mx-6 [&>a:last-child]:border-0'>
+        <div className='text-4xl lg:text-5xl flex flex-col gap-y-4 cursor-pointer transition-colors mx-6 [&>a:last-child]:border-0'>
           {data.map(item => (
             <Link
               to={`/torneos-temporada/${item.id}`}
@@ -32,14 +32,14 @@ const Welcome = () => {
           ))}
         </div>
         <div className='flex items-center justify-center gap-x-4'>
-          <div className='h-16 aspect-square rounded-full overflow-auto'>
+          <div className='h-20 aspect-square rounded-full overflow-auto'>
             <img
               src='/assets/logos/1ergolpe.jpg'
               className='object-cover object-center w-full'
               alt='Logo Caza y Pesca'
             />
           </div>
-          <div className='h-16 aspect-square rounded-full overflow-auto'>
+          <div className='h-20 aspect-square rounded-full overflow-auto'>
             <img
               src='/assets/logos/cyp.jpg'
               className='object-cover object-center w-full'
@@ -47,6 +47,11 @@ const Welcome = () => {
             />
           </div>
         </div>
+        <img
+          src='/assets/images/bg.jpg'
+          alt='background'
+          className='absolute top-0 left-0 w-full h-full object-cover object-center -z-10'
+        />
       </div>
 
       <Helmet>

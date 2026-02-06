@@ -21,7 +21,7 @@ const Header = () => {
           </label>
         </div>
       </div>
-      <div className='navbar-center text-primary'>
+      <div className='navbar-center'>
         <Link
           to='/'
           className='transition-colors'

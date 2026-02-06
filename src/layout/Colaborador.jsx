@@ -2,7 +2,7 @@ import Image from '../components/Image'
 
 const Item = ({ item }) => {
   return (
-    <article className='rounded-full overflow-hidden aspect-square w-12'>
+    <article>
       <a
         href={item.url}
         target='_blank'

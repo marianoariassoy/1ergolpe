@@ -4,7 +4,7 @@ import TitleRow from '../../components/TitleRow'
 import { Link } from 'react-router-dom'
 
 const Calendario = ({ id_season }) => {
-  const { data, loading } = useFetch(`/tournaments/13/matches`)
+  const { data, loading } = useFetch(`/tournaments/${id_season}/matches`)
   if (loading) return <Loader />
   if (!data) return null
 
