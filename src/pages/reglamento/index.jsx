@@ -30,10 +30,17 @@ const Reglamento = () => {
         Las/os jugadoras/es serán incluidas/os en la categoría que corresponda, de acuerdo a su ranking y a la
         consideración de los Profesores responsables de Primer Golpe, que reconocen y evalúan su nivel. Cada jugador/a
         que así lo desee, puede jugar además en otra categoría, siempre y cuando sea la inmediatamente superior a la que
-        le corresponda. Sistema de cambios de categoría: En todas las categorías, con excepción de la Super A, tanto de
-        damas como de caballeros, ascenderán los jugadores finalistas de cada categoría. Podrán establecerse otros
-        ascensos y/o descensos por exclusiva decisión de los responsables de Primer Golpe y en relación al Ranking de
-        cada categoría. Los ascensos y descensos y reordenamiento de categorías se producirán al finalizar cada torneo.
+        le corresponda. <br />
+        Sistema de cambios de categoría: En todas las categorías, con excepción de la Super A, tanto de damas como de
+        caballeros, ascenderán:
+        <br />
+        1. las/los Campeonas/es de cada categoría al finalizar cada Torneo.
+        <br />
+        2. Las/los ubicadas/os 1ras/os y 2das/os del Ranking Anual al finalizar cada año calendario. <br />
+        3. Podrán establecerse otros ascensos y/o descensos por exclusiva decisión de los responsables de Primer Golpe.{' '}
+        <br />
+        Los ascensos y descensos y reordenamiento de categorías se producirán al finalizar cada torneo y al finalizar
+        cada año calendario según corresponda a lo mencionado anteriormente.
         <br /> <br />
         <strong className='text-primary'>De los Partidos: </strong>
         Los partidos se regirán por las reglas de juego aprobadas por la Federación Internacional de Tenis (ITF), la

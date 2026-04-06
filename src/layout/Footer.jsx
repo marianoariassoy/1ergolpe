@@ -11,7 +11,6 @@ const Footer = () => {
   const year = new Date().getFullYear()
   const { data, loading } = useFetch(`/partners`)
   const location = useLocation()
-
   if (loading) return <Loader />
 
   return (
@@ -33,13 +32,18 @@ const Footer = () => {
             >
               {data.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className='flex justify-center items-center h-20'>
+                  <a
+                    href={item.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex justify-center items-center h-20 z-20 cursor-pointer'
+                  >
                     <img
                       src={item.image}
                       alt={item.title}
                       className='max-h-14 object-contain grayscale hover:grayscale-0 transition'
                     />
-                  </div>
+                  </a>
                 </SwiperSlide>
               ))}
             </Swiper>
