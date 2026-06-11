@@ -8,7 +8,7 @@ import TitleRow from '../../components/TitleRow'
 const JugadoresRanking = () => {
   const { data, loading } = useFetch(`/ranking`)
   const [filter, setFilter] = useState(16)
-  const [year, setYear] = useState(2025)
+  const [year, setYear] = useState(2026)
   const [dataFiltered, setDataFiltered] = useState([])
 
   useEffect(() => {
@@ -35,6 +35,14 @@ const JugadoresRanking = () => {
       <div className='text-center '>
         <h1 className='font-bold text-primary text-xl'>Ranking de jugadores</h1>
         <div className='flex justify-center items-center gap-x-3 text-xl'>
+          <button
+            className={`font-semibold ${
+              year === 2026 ? 'text-primary' : 'opacity-70 hover:text-primary hover:opacity-100'
+            }`}
+            onClick={() => setYear(2026)}
+          >
+            2026
+          </button>
           <button
             className={`font-semibold ${
               year === 2025 ? 'text-primary' : 'opacity-70 hover:text-primary hover:opacity-100'
